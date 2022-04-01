@@ -14,8 +14,8 @@ def alive():
 @app.route('/predict', methods=["GET", "POST"])
 def predicted():
     error = None
-    input_json = request.get_json(force=True)
     if request.method == 'POST':
+        input_json = request.get_json(force=True)
         data_prep = preprocess(input_json["data"])
         if data_prep:
             return str(predict(data_prep))
