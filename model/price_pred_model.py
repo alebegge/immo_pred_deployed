@@ -1,11 +1,14 @@
 import pandas as pd
 import numpy as np 
+import os
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import PolynomialFeatures
 from sklearn.pipeline import make_pipeline
 
-df_model = pd.read_csv('model\db_model.csv')
+path_csv = os.path.join("model", 'db_model.csv')
+
+df_model = pd.read_csv(path_csv)
 df_model = df_model.drop(columns=["Unnamed: 0"])
 
 #Creating the shaped DF 
