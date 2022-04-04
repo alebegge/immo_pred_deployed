@@ -1,17 +1,23 @@
 # Prediction Price Real Estate Belgium API (v1.0)
 
-This is the first version of the API. All working requests are described below. 
+> Prediction Price IMMO API is a learning project using **_python 3.10_**. 
+
+#### Goal
+Be able to predict the sale price of belgian real estate propreties based on differents parameters. 
+To achieve that goal, we used a machine learning model based on a polynominal regression (degree = 3). 
+
+**Please keep in mind that is only the first version of this project.** 
 
 ## Install 
 The API is deployed on **Heroku** and can be found here: 
 
-==https://pp-be-immo.herokuapp.com/==
+https://pp-be-immo.herokuapp.com/ 
 
 1. ## Prediction Price
 
 This route allow your to post the data about your item and get a return prediction price. 
 
-### GET Request 
+### **GET** Request 
 
 `GET /predict/` 
 
@@ -47,7 +53,7 @@ This route allow your to post the data about your item and get a return predicti
 
 ---
 
-### POST Request
+### **POST** Request
 ` POST /predict/ `
 
 > Enter all the **_paramters_** of your items in a **JSON** format. 
@@ -78,5 +84,18 @@ This route allow your to post the data about your item and get a return predicti
 ``` 
 
 --- 
+
+## Next steps:
+
+> This project is still in progress and futur routes will be added. 
+> If you want to contribute, please send an email before *alexandre-le-begge@becode.xyz*
+
+* Improve documentation using REST API and SWAGGER
+* Create a delete route 
+* Manage acces and auto-generated keys 
+* Create a 3D route to return a 3D vizualisation
+* ZIP route to return specifics data about specific location 
+* More ideas... 
+
 
 
