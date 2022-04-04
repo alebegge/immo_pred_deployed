@@ -27,36 +27,11 @@ def predicted():
             error = 'Invalid data, please refer to the documentation.'
             return error
     if request.method == 'GET':
-        return doc
+      with open("doc.json","r") as doc:
+        return str(doc.read())
     else:
         error = 'This method is now allowed. Please choice between GET or POST.'
         return error
-
-
-doc ="""
-{
-  "data": 
-  {
-    "area": int,
-    "property-type": "APARTMENT" | "HOUSE" | "OTHERS",
-    "rooms-number": int,
-    "zip-code": int,
-    "land-area": Optional[int],
-    "garden": Optional[bool],
-    "garden-area": Optional[int],
-    "equipped-kitchen": Optional[bool],
-    "full-address": Optional[str],
-    "swimming-pool": Optional[bool],
-    "furnished": Optional[bool],
-    "open-fire": Optional[bool],
-    "terrace": Optional[bool],
-    "terrace-area": Optional[int],
-    "facades-number": Optional[int],
-    "building-state": Optional[
-      "NEW" | "GOOD" | "TO RENOVATE" | "JUST RENOVATED" | "TO REBUILD"
-    ]
-  }
-} """
 
 if __name__ == '__main__':
   port = os.environ.get("PORT", 5000)
