@@ -20,9 +20,13 @@ def predicted():
         if data_prep:
           predicted = int(predict(data_prep))
           if predicted > 10000:
-            return {"prediction": predicted}
+            return {
+              "prediction": predicted
+            }
           else:
-            return {"error": "unable to predict a price. Please check your parameters."}
+            return {
+              "error": "unable to predict a price. Please check your parameters."
+            }
         else:
             error = 'Invalid data, please refer to the documentation.'
             return error
