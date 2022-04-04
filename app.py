@@ -18,14 +18,14 @@ def predicted():
         input_json = request.get_json(force=True)
         data_prep = preprocess(input_json["data"])
         if data_prep:
-            return str(predict(data_prep))
+            return {"prediction": int(predict(data_prep))}
         else:
             error = 'Invalid data, please refer to the documentation.'
             return error
     if request.method == 'GET':
         return doc
     else:
-        error = 'This route only takes POST as method for now.'
+        error = 'This method is now allowed. Please choice between GET or POST.'
         return error
 
 
