@@ -18,7 +18,11 @@ def predicted():
         input_json = request.get_json(force=True)
         data_prep = preprocess(input_json["data"])
         if data_prep:
-            return {"prediction": int(predict(data_prep))}
+          predicted = int(predict(data_prep))
+          if predicted > 10000:
+            return {"prediction": predicted}
+          else:
+            return {"error": "unable to predict a price. Please check your parameters."}
         else:
             error = 'Invalid data, please refer to the documentation.'
             return error

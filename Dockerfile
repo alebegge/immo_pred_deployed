@@ -8,7 +8,7 @@ COPY . /app
 WORKDIR /app
 
 #remove the venv
-RUN rm -rf pred_api
+RUN rm -rf venv
 
 #installing the libraries
 RUN pip install -r requirements.txt
