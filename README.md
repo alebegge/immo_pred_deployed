@@ -79,7 +79,7 @@ This route allow your to post the data about your item and get a return predicti
 
 ```
 {
-    "prediction": 3321369
+    "prediction": 331876
 }
 ``` 
 
