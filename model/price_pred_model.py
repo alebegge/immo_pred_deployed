@@ -43,9 +43,6 @@ degree = 3
 X_train, X_test, y_train, y_test = train_test_split(X,y, test_size=0.2, random_state=42)
 polyreg=make_pipeline(PolynomialFeatures(degree),LinearRegression(),)
 polyreg.fit(X,y)
-y_pred = polyreg.predict(X_test)
-# polyreg.score(X_test, y_test)
 
 def price_pred_poly_3deg(X_test):
-    price_pred = polyreg.predict(X_test)
-    return price_pred
+    return polyreg.predict(X_test) 
