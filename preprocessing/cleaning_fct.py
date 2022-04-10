@@ -88,7 +88,7 @@ def cleaning_pool(pool):
 
 def full_address(address):
     address = str(address)
-    return full_address
+    return address
 
 def cleaning_equipped_kitchen(kitchen):
     kitchen = int(kitchen)

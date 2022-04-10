@@ -2,12 +2,11 @@ import json
 from preprocessing.cleaning_fct import *
 
 
-def preprocess(input_json) -> json:
+def preprocess(input_json: json) -> json:
     """
     This function will be able to take all the input from the user as Json file and clean it. 
     erreur custom -> class from inerhit (flask ?)
     """
-
     predict_dict = {}
 
     # non-optional Livable surface
@@ -51,9 +50,8 @@ def preprocess(input_json) -> json:
             predict_dict["West Flanders"] = 1
         if 9000 <= zip_code <= 9999:
             predict_dict["East Flanders"] = 1
-
     else:
-        raise ValueError("You must enter a valib zip code.")
+        raise ValueError("You must enter a valid zip code.")
 
     #optional kitchen equipement
     if "equipped-kitchen" in input_json:
